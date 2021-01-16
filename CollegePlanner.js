@@ -27,12 +27,12 @@
 
   function addEvent() {
     let newEvent = this.nextElementSibling;
-    if (newEvent.value) {
-      createNewbox(newEvent);
+    if (newEvent.value && this.parentNode.querySelectorAll("input")[1].value) {
+      genNewEventBox(newEvent);
     }
   }
 
-  function createNewbox(newEvent) {
+  function genNewEventBox(newEvent) {
     let newDiv = gen('div');
     let newP = gen('p');
     newP.textContent = newEvent.value;
@@ -42,7 +42,7 @@
 
     let time = gen('p');
     time.classList.add('timePTag');
-    time.textContent = id('timeInput').value;
+    time.textContent = newEvent.parentNode.querySelectorAll("input")[1].value;
 
     // add elements to the container box
     newDiv.appendChild(circle);
