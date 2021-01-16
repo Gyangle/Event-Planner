@@ -20,7 +20,7 @@
     let uncheckedCircle = qsa('.checkCircle');
     for (let i = 0; i < uncheckedCircle.length; i ++) {
       uncheckedCircle[i].addEventListener('click', clickCheckCircle);
-    }
+    }a
     */
   }
 
