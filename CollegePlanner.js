@@ -1,6 +1,6 @@
 "use strict";
 (function() {
-  const TODOLISTURL = "../resource/todoList/";
+  const TODOLISTURL = "resource/todoList/";
 
   window.addEventListener('load', init);
 
