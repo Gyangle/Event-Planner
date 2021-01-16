@@ -9,87 +9,88 @@
   <script src='CollegePlanner.js'></script>
 </head>
 <body>
-  <section><h1>College Planner</h1></section>
-  <section>
-    <h1 class='listHeader'>Today</h1>
-    <div id='todayList'>
-      <div class='event'>
-        <img src = "resource/todoList/PlusCircle.png" id="addList" alt="Add event button">
-        <input placeholder="Add TODO ..." maxlength="12">
-        <img src = "resource/todoList/PST.png" alt="time zone">
-        <div>
+  <header>
+    <h1>College Planner</h1>
+  </header>
+  <main>
+    <section id="today">
+      <h2 class='listHeader'>Today</h2>
+      <div id='todayList'>
+        <div class='event'>
+          <img src = "resource/todoList/PlusCircle.png" id="addList" alt="Add event button">
+          <input placeholder="Add TODO ..." maxlength="12">
+          <img src = "resource/todoList/PST.png" alt="time zone">
           <input id="timeInput" type="time" value="3:30" min="09:00" max="18:00">
+        </div>
+
+        <div class="event">
+          <img src="resource/todoList/red_circle.png" alt="Event check box" class="checkCircle">
+          <p>Hard code planner app</p>
+          <p class="timePTag">12:00</p>
+          <img src="resource/todoList/X.png" alt="Event delete box" class="deleteBox">
+        </div>
+
+        <div class="event">
+          <img src="resource/todoList/red_circle.png" alt="Event check box" class="checkCircle">
+          <p>User Research</p>
+          <p class="timePTag">12:00</p>
+          <img src="resource/todoList/X.png" alt="Event delete box" class="deleteBox">
+        </div>
+
+        <div class="event">
+          <img src="resource/todoList/red_circle.png" alt="Event check box" class="checkCircle">
+          <p>INFO 340 hw 2</p>
+          <p class="timePTag">12:00</p>
+          <img src="resource/todoList/X.png" alt="Event delete box" class="deleteBox">
         </div>
       </div>
 
-      <div class="event">
-        <img src="resource/todoList/red_circle.png" alt="Event check box" class="checkCircle">
-        <p>Hard code planner app</p>
-        <p class="timePTag">12:00</p>
-        <img src="resource/todoList/X.png" alt="Event delete box" class="deleteBox">
-      </div>
+      <div id='finishedList'>
+        <div class="event">
+          <img src="resource/todoList/check_circle.png" alt="Event check box" class="checkCircle">
+          <p class="crossed">Meet Hackathon team</p><p class="timePTag">16:14</p>
+          <img src="resource/todoList/X.png" alt="Event delete box" class="deleteBox">
+        </div>
 
-      <div class="event">
-        <img src="resource/todoList/red_circle.png" alt="Event check box" class="checkCircle">
-        <p>User Research</p>
-        <p class="timePTag">12:00</p>
-        <img src="resource/todoList/X.png" alt="Event delete box" class="deleteBox">
-      </div>
+        <div class="event">
+          <img src="resource/todoList/check_circle.png" alt="Event check box" class="checkCircle">
+          <p class="crossed">FIN 350 Quiz 1</p><p class="timePTag">16:14</p>
+          <img src="resource/todoList/X.png" alt="Event delete box" class="deleteBox">
+        </div>
 
-      <div class="event">
-        <img src="resource/todoList/red_circle.png" alt="Event check box" class="checkCircle">
-        <p>INFO 340 hw 2</p>
-        <p class="timePTag">12:00</p>
-        <img src="resource/todoList/X.png" alt="Event delete box" class="deleteBox">
-      </div>
-    </div>
-
-    <div id='finishedList'>
-      <div class="event">
-        <img src="resource/todoList/check_circle.png" alt="Event check box" class="checkCircle">
-        <p class="crossed">Meet Hackathon team</p><p class="timePTag">16:14</p>
-        <img src="resource/todoList/X.png" alt="Event delete box" class="deleteBox">
-      </div>
-
-      <div class="event">
-        <img src="resource/todoList/check_circle.png" alt="Event check box" class="checkCircle">
-        <p class="crossed">FIN 350 Quiz 1</p><p class="timePTag">16:14</p>
-        <img src="resource/todoList/X.png" alt="Event delete box" class="deleteBox">
-      </div>
-
-      <div class="event">
-        <img src="resource/todoList/check_circle.png" alt="Event check box" class="checkCircle">
-        <p class="crossed">Draft planner UI</p><p class="timePTag">16:14</p>
-        <img src="resource/todoList/X.png" alt="Event delete box" class="deleteBox">
-      </div>
-    <div>
-  </section>
-  <section>
-    <h1 class='listHeader'>Tomorrow</h1>
-    <div id='todayList'>
-      <div class='event'>
-        <img src = "resource/todoList/PlusCircle.png" id="addList" alt="Add event button">
-        <input placeholder="Add TODO ..." maxlength="12">
-        <img src = "resource/todoList/PST.png" alt="time zone">
-        <div>
-          <input id="timeInput" type="time" value="3:30" min="09:00" max="18:00">
+        <div class="event">
+          <img src="resource/todoList/check_circle.png" alt="Event check box" class="checkCircle">
+          <p class="crossed">Draft planner UI</p><p class="timePTag">16:14</p>
+          <img src="resource/todoList/X.png" alt="Event delete box" class="deleteBox">
         </div>
       </div>
+    </section>
 
-      <div class="event">
-        <img src="resource/todoList/red_circle.png" alt="Event check box" class="checkCircle">
-        <p>Hackathon   </p>
-        <p class="timePTag">12:00</p>
-        <img src="resource/todoList/X.png" alt="Event delete box" class="deleteBox">
-      </div>
+    <section id="tomorrow">
+      <h2 class='listHeader'>Tomorrow</h2>
+      <div id='todayList'>
+        <div class='event'>
+          <img src = "resource/todoList/PlusCircle.png" id="addList" alt="Add event button">
+          <input placeholder="Add TODO ..." maxlength="12">
+          <img src = "resource/todoList/PST.png" alt="time zone">
+          <input id="timeInput" type="time" value="3:30" min="09:00" max="18:00">
+        </div>
 
-      <div class="event">
-        <img src="resource/todoList/red_circle.png" alt="Event check box" class="checkCircle">
-        <p>Submit Project</p>
-        <p class="timePTag">14:00</p>
-        <img src="resource/todoList/X.png" alt="Event delete box" class="deleteBox">
+        <div class="event">
+          <img src="resource/todoList/red_circle.png" alt="Event check box" class="checkCircle">
+          <p>Hackathon</p>
+          <p class="timePTag">12:00</p>
+          <img src="resource/todoList/X.png" alt="Event delete box" class="deleteBox">
+        </div>
+
+        <div class="event">
+          <img src="resource/todoList/red_circle.png" alt="Event check box" class="checkCircle">
+          <p>Submit Project</p>
+          <p class="timePTag">14:00</p>
+          <img src="resource/todoList/X.png" alt="Event delete box" class="deleteBox">
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  <main>
 </body>
 </html>
