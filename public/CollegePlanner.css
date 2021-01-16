@@ -1,0 +1,90 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.event {
+  border: 1px solid;
+  border-color: black;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  width: 400px;
+  height: 20px;
+  background: #D1F7FF;
+  border-radius: 30px;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+input {
+  height: 30px;
+  width: 80%;
+  padding: 0px;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: hidden;
+  background: #D1F7FF;
+}
+
+input:focus {
+  outline: none;
+}
+
+.event > p {
+  display: inline;
+  margin-left: 10px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.event > input {
+  margin-left: 8px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+
+}
+
+.deleteBox, .checkCircle {
+  opacity: 0.2;
+}
+
+#addList {
+  opacity: 0.6;
+}
+.deleteBox:hover, #addList:hover {
+  opacity: 0.8;
+}
+
+.checkCircle {
+  opacity: 0.8;
+}
+
+.crossed {
+  text-decoration: line-through;
+}
+
+#timeInput {
+  width: 105px;
+  margin: 0;
+}
+
+.event > .timePTag {
+  font-size: 18px;
+  margin: auto;
+}
+
+.listHeader {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 50px;
+  margin-bottom: 20px;
+}
