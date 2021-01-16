@@ -32,7 +32,7 @@
   function createNewbox(newEvent) {
     let newDiv = gen('div');
     let newP = gen('p');
-    console.log(newP)
+    console.log(newEvent.length)
     newP.textContent = newEvent;
     newDiv.classList.add('event');
     let circle = generateCheckCircle("red_circle");
@@ -46,7 +46,7 @@
     newDiv.appendChild(newP);
     newDiv.appendChild(time);
     newDiv.appendChild(delectCircle);
-    if (newP.length > 0) {
+    if (newEvent.length > 0) {
       id('todayList').appendChild(newDiv);
     }
   }
@@ -54,7 +54,7 @@
   // generate the delete circle at the end of each task
   function genereateDeleteCircle() {
     let img = gen('img');
-    img.src = TODOLISTURL + 'red_circle.png';
+    img.src = TODOLISTURL + 'X.png';
     img.alt = 'Event delete box';
     img.classList.add('deleteBox');
     img.addEventListener('click', deleteTask)
@@ -63,16 +63,13 @@
 
   // add actions to the check circle
   function clickCheckCircle() {
-    console.log(this.parentNode);
-    console.log(this.nextSibling);
-
     this.nextSibling.classList.add('crossed');
 
     // move to bottom of the list
     let currentDiv = this.parentNode;
     let checkedCircle = generateCheckCircle("check_circle");
     this.parentNode.replaceChild(checkedCircle, this);
-    id('finishedList').appendChild(currentDiv)
+    id('finishedList').appendChild(currentDiv);
 
   }
 
