@@ -2,6 +2,19 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+#list-view {
+  float: left;
+}
+
+#calender-view {
+  float: right;
+  margin-top: 40px;
+}
+
+#calender {
+  max-height: 720px;
+}
+
 .event {
   border: 1px solid;
   border-color: black;
