@@ -16,12 +16,10 @@
     }
 
     // line 66 can't crossed the p tag. Can't access the nex sibling
-    /*
     let uncheckedCircle = qsa('.checkCircle');
     for (let i = 0; i < uncheckedCircle.length; i ++) {
       uncheckedCircle[i].addEventListener('click', clickCheckCircle);
-    }a
-    */
+    }
   }
 
   function addEvent() {
@@ -37,6 +35,7 @@
     newDiv.classList.add('event');
     let circle = generateCheckCircle("red_circle");
     let delectCircle = genereateDeleteCircle();
+
     let time = gen('p');
     time.classList.add('timePTag');
     time.textContent = id('timeInput').value;
@@ -63,7 +62,7 @@
 
   // add actions to the check circle
   function clickCheckCircle() {
-    this.nextSibling.classList.add('crossed');
+    this.nextElementSibling.classList.add('crossed');
 
     // move to bottom of the list
     let currentDiv = this.parentNode;
