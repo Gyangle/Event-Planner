@@ -10,8 +10,6 @@
   }
 
   function initializeIcons() {
-
-
     let deleteIcons = qsa('.deleteBox');
     for (let i = 0; i < deleteIcons.length; i ++) {
       deleteIcons[i].addEventListener('click', deleteTask);
@@ -24,7 +22,6 @@
       uncheckedCircle[i].addEventListener('click', clickCheckCircle);
     }
     */
-
   }
 
   function addEvent() {
@@ -35,6 +32,7 @@
   function createNewbox(newEvent) {
     let newDiv = gen('div');
     let newP = gen('p');
+    console.log(newP)
     newP.textContent = newEvent;
     newDiv.classList.add('event');
     let circle = generateCheckCircle("red_circle");
@@ -43,16 +41,15 @@
     time.classList.add('timePTag');
     time.textContent = id('timeInput').value;
 
-
     // add elements to the container box
     newDiv.appendChild(circle);
     newDiv.appendChild(newP);
     newDiv.appendChild(time);
     newDiv.appendChild(delectCircle);
-
-    id('todayList').appendChild(newDiv);
+    if (newP.length > 0) {
+      id('todayList').appendChild(newDiv);
+    }
   }
-
 
   // generate the delete circle at the end of each task
   function genereateDeleteCircle() {
@@ -64,12 +61,11 @@
     return img;
   }
 
-
-
   // add actions to the check circle
   function clickCheckCircle() {
     console.log(this.parentNode);
-    console.log(this.nextSibling)
+    console.log(this.nextSibling);
+
     this.nextSibling.classList.add('crossed');
 
     // move to bottom of the list
