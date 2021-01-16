@@ -6,7 +6,10 @@
 
   function init() {
     initializeIcons();
-    id('addList').addEventListener('click', addEvent);
+    let addNewEvent = qsa(".addList");
+    for (let i = 0; i < addNewEvent.length; i++) {
+      addNewEvent[i].addEventListener('click', addEvent);
+    }
   }
 
   function initializeIcons() {
@@ -23,15 +26,16 @@
   }
 
   function addEvent() {
-    let newEvent = qsa('input')[0].value;
-    createNewbox(newEvent);
+    let newEvent = this.nextElementSibling;
+    if (newEvent.value) {
+      createNewbox(newEvent);
+    }
   }
 
   function createNewbox(newEvent) {
     let newDiv = gen('div');
     let newP = gen('p');
-    console.log(newEvent.length)
-    newP.textContent = newEvent;
+    newP.textContent = newEvent.value;
     newDiv.classList.add('event');
     let circle = generateCheckCircle("red_circle");
     let delectCircle = genereateDeleteCircle();
@@ -45,9 +49,7 @@
     newDiv.appendChild(newP);
     newDiv.appendChild(time);
     newDiv.appendChild(delectCircle);
-    if (newEvent.length > 0) {
-      id('todayList').appendChild(newDiv);
-    }
+    newEvent.parentNode.parentNode.appendChild(newDiv);
   }
 
   // generate the delete circle at the end of each task
@@ -67,7 +69,7 @@
     let currentDiv = this.parentNode;
     let checkedCircle = generateCheckCircle("check_circle");
     this.parentNode.replaceChild(checkedCircle, this);
-    currentDiv.parentNode.parentNode.children[2].appendChild(currentDiv);
+    currentDiv.parentNode.parentNode.appendChild(currentDiv);
   }
 
   // delete the current task

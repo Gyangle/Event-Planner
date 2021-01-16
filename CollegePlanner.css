@@ -56,10 +56,10 @@ input:focus {
   opacity: 0.2;
 }
 
-#addList {
+.addList {
   opacity: 0.6;
 }
-.deleteBox:hover, #addList:hover, .checkCircle:hover {
+.deleteBox:hover, .addList:hover, .checkCircle:hover {
   opacity: 0.8;
 }
 
