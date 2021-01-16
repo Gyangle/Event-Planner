@@ -63,13 +63,13 @@
   // add actions to the check circle
   function clickCheckCircle() {
     this.nextElementSibling.classList.add('crossed');
-
+    console.log("1");
     // move to bottom of the list
     let currentDiv = this.parentNode;
     let checkedCircle = generateCheckCircle("check_circle");
     this.parentNode.replaceChild(checkedCircle, this);
-    id('finishedList').appendChild(currentDiv);
-
+    console.log("2");
+    this.parentNode.parentNode.id('finishedList').appendChild(currentDiv);
   }
 
   // delete the current task
