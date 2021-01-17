@@ -1,6 +1,6 @@
 "use strict";
 (function() {
-  const TODOLISTURL = "resource/todoList/";
+  const TODOLISTURL = "img/todoList/";
 
   window.addEventListener('load', init);
 
@@ -10,21 +10,51 @@
     for (let i = 0; i < addNewEvent.length; i++) {
       addNewEvent[i].addEventListener('click', addEvent);
     }
+    floatWindow();
   }
 
+  function floatWindow() {
+    // Get the modal
+    var modal = id("addMyTask");
+
+    // Get the button that opens the modal
+    var btn = id("addCalenderBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  }
+
+  // enable all the defalt icons on the page
   function initializeIcons() {
     let deleteIcons = qsa('.deleteBox');
     for (let i = 0; i < deleteIcons.length; i ++) {
       deleteIcons[i].addEventListener('click', deleteTask);
     }
 
-    // line 66 can't crossed the p tag. Can't access the nex sibling
     let uncheckedCircle = qsa('.checkCircle');
     for (let i = 0; i < uncheckedCircle.length; i ++) {
       uncheckedCircle[i].addEventListener('click', clickCheckCircle);
     }
   }
 
+  // add the event when click the icon
   function addEvent() {
     let newEvent = this.nextElementSibling;
     if (newEvent.value && this.parentNode.querySelectorAll("input")[1].value) {
@@ -32,6 +62,7 @@
     }
   }
 
+  // add a new event to the event list
   function genNewEventBox(newEvent) {
     let newDiv = gen('div');
     let newP = gen('p');

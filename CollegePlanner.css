@@ -2,6 +2,18 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+header {
+  background-color: purple;
+  padding: 2px;
+  color: white;
+  font-size: 2em;
+}
+
+header > h1 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
 #list-view {
   float: left;
 }
@@ -14,6 +26,13 @@ body {
 #calender {
   max-height: 720px;
 }
+
+#calender-view > div {
+  display: flex;
+  align-items:center;
+}
+
+
 
 .event {
   border: 1px solid;
@@ -101,4 +120,44 @@ input:focus {
   font-weight: bold;
   font-size: 50px;
   margin-bottom: 20px;
+  margin-top: 25px;
+}
+
+/* The add task pop up (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.addTaskContent {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }

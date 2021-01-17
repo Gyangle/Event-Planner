@@ -18,51 +18,51 @@
         <h2 class='listHeader'>Today</h2>
         <div id='todayList'>
           <div class='event'>
-            <img src = "resource/todoList/PlusCircle.png" class="addList" alt="Add event button">
+            <img src = "img/todoList/PlusCircle.png" class="addList" alt="Add event button">
             <input placeholder="Add TODO ..." maxlength="12">
-            <img src = "resource/todoList/PST.png" alt="time zone">
+            <img src = "img/todoList/PST.png" alt="time zone">
             <input id="timeInput" type="time" value="3:30" min="09:00" max="18:00">
           </div>
 
           <div class="event">
-            <img src="resource/todoList/red_circle.png" alt="Event check box" class="checkCircle">
+            <img src="img/todoList/red_circle.png" alt="Event check box" class="checkCircle">
             <p>Hard code planner app</p>
             <p class="timePTag">12:00</p>
-            <img src="resource/todoList/X.png" alt="Event delete box" class="deleteBox">
+            <img src="img/todoList/X.png" alt="Event delete box" class="deleteBox">
           </div>
 
           <div class="event">
-            <img src="resource/todoList/red_circle.png" alt="Event check box" class="checkCircle">
+            <img src="img/todoList/red_circle.png" alt="Event check box" class="checkCircle">
             <p>User Research</p>
             <p class="timePTag">12:00</p>
-            <img src="resource/todoList/X.png" alt="Event delete box" class="deleteBox">
+            <img src="img/todoList/X.png" alt="Event delete box" class="deleteBox">
           </div>
 
           <div class="event">
-            <img src="resource/todoList/red_circle.png" alt="Event check box" class="checkCircle">
+            <img src="img/todoList/red_circle.png" alt="Event check box" class="checkCircle">
             <p>INFO 340 hw 2</p>
             <p class="timePTag">12:00</p>
-            <img src="resource/todoList/X.png" alt="Event delete box" class="deleteBox">
+            <img src="img/todoList/X.png" alt="Event delete box" class="deleteBox">
           </div>
         </div>
 
         <div id='finishedList'>
           <div class="event">
-            <img src="resource/todoList/check_circle.png" alt="Event check box" class="checkCircle">
+            <img src="img/todoList/check_circle.png" alt="Event check box" class="checkCircle">
             <p class="crossed">Meet Hackathon team</p><p class="timePTag">16:14</p>
-            <img src="resource/todoList/X.png" alt="Event delete box" class="deleteBox">
+            <img src="img/todoList/X.png" alt="Event delete box" class="deleteBox">
           </div>
 
           <div class="event">
-            <img src="resource/todoList/check_circle.png" alt="Event check box" class="checkCircle">
+            <img src="img/todoList/check_circle.png" alt="Event check box" class="checkCircle">
             <p class="crossed">FIN 350 Quiz 1</p><p class="timePTag">16:14</p>
-            <img src="resource/todoList/X.png" alt="Event delete box" class="deleteBox">
+            <img src="img/todoList/X.png" alt="Event delete box" class="deleteBox">
           </div>
 
           <div class="event">
-            <img src="resource/todoList/check_circle.png" alt="Event check box" class="checkCircle">
+            <img src="img/todoList/check_circle.png" alt="Event check box" class="checkCircle">
             <p class="crossed">Draft planner UI</p><p class="timePTag">16:14</p>
-            <img src="resource/todoList/X.png" alt="Event delete box" class="deleteBox">
+            <img src="img/todoList/X.png" alt="Event delete box" class="deleteBox">
           </div>
         </div>
       </section>
@@ -71,31 +71,45 @@
         <h2 class='listHeader'>Tomorrow</h2>
         <div id='todayList'>
           <div class='event'>
-            <img src = "resource/todoList/PlusCircle.png" class="addList" alt="Add event button">
+            <img src = "img/todoList/PlusCircle.png" class="addList" alt="Add event button">
             <input placeholder="Add TODO ..." maxlength="12">
-            <img src = "resource/todoList/PST.png" alt="time zone">
+            <img src = "img/todoList/PST.png" alt="time zone">
             <input id="timeInput" type="time" value="3:30" min="09:00" max="18:00">
           </div>
 
           <div class="event">
-            <img src="resource/todoList/red_circle.png" alt="Event check box" class="checkCircle">
+            <img src="img/todoList/red_circle.png" alt="Event check box" class="checkCircle">
             <p>Hackathon</p>
             <p class="timePTag">12:00</p>
-            <img src="resource/todoList/X.png" alt="Event delete box" class="deleteBox">
+            <img src="img/todoList/X.png" alt="Event delete box" class="deleteBox">
           </div>
 
           <div class="event">
-            <img src="resource/todoList/red_circle.png" alt="Event check box" class="checkCircle">
+            <img src="img/todoList/red_circle.png" alt="Event check box" class="checkCircle">
             <p>Submit Project</p>
             <p class="timePTag">14:00</p>
-            <img src="resource/todoList/X.png" alt="Event delete box" class="deleteBox">
+            <img src="img/todoList/X.png" alt="Event delete box" class="deleteBox">
           </div>
         </div>
         <div id='finishedList'></div>
       </section>
     </section>
     <section id="calender-view">
-      <img src="img/calender.png" alt="Calender" id="calender">
+      <div>
+        <img src="img/schedule/Group 48.png" alt="Calender" id='addCalenderBtn'>
+        <img src="img/schedule/ArrowArcLeft.png" alt="Calender">
+        <img src="img/schedule/UserCircle.png" alt="Calender">
+      </div>
+      <img src="img/schedule/collaborate_calender.png" alt="Calender" id="calender">
+    </section>
+    <section>
+      <div id="addMyTask" class="modal">
+        <!-- Modal content -->
+        <div class="addTaskContent">
+          <span class="close">&times;</span>
+          <img src="img/schedule/Popup.png" alt="add event to Calender">
+        </div>
+      </div>
     </section>
   <main>
 </body>
